@@ -35,8 +35,14 @@ input.onButtonPressed(Button.B, function () {
 //shake for highest number
 input.onGesture(Gesture.Shake, function() {
     basic.clearScreen()
-    if (randomNumber1 > randomNumber2)
+    if (randomNumber1 > randomNumber2) {
         basic.showNumber(randomNumber1)
-    else (randomNumber1 < randomNumber2)
+        basic.showString(">")
         basic.showNumber(randomNumber2)
+    } else { (randomNumber1 < randomNumber2)
+        basic.showNumber(randomNumber1)
+        basic.showString("<")
+        basic.showNumber(randomNumber2)
+        basic.showIcon(IconNames.Happy)
+    }
 })
